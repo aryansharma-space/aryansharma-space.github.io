@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Aryan Sharma</title>
+  <meta name="description" content="Resume page for Aryan Sharma, aerospace engineering student." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --surface:#111216;
+      --text:#f3f4f6;
+      --muted:#9aa0aa;
+      --line:rgba(255,255,255,0.10);
+      --accent:#8cb6ff;
+      --max:1080px;
+      --r:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Inter",sans-serif;
+      background:radial-gradient(circle at top, #14161c 0%, #0b0b0d 45%);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(92%,var(--max));margin:0 auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(16px);
+      background:rgba(11,11,13,.78);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 0;
+    }
+    .brand{
+      font-size:.95rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    }
+    .links{
+      display:flex;gap:22px;color:var(--muted);font-size:.95rem;
+    }
+    .links a:hover{color:var(--text)}
+    main{padding:72px 0}
+    .eyebrow{
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      margin-bottom:18px;
+    }
+    h1{
+      font-family:"Instrument Serif",serif;
+      font-size:clamp(2.8rem,6vw,4.8rem);
+      font-weight:400;
+      line-height:.98;
+      letter-spacing:-.04em;
+      margin-bottom:18px;
+    }
+    .lead{
+      color:#d7dbe1;
+      max-width:68ch;
+      margin-bottom:34px;
+    }
+    .grid{
+      display:grid;
+      gap:22px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:28px;
+    }
+    h2{
+      font-size:1.18rem;
+      margin-bottom:12px;
+    }
+    .item{
+      padding:16px 0;
+      border-top:1px solid var(--line);
+    }
+    .item:first-of-type{border-top:none;padding-top:0}
+    .item strong{
+      display:block;
+      margin-bottom:4px;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:.93rem;
+      margin-bottom:8px;
+    }
+    .text{
+      color:#d8dce2;
+    }
+    footer{
+      padding:0 0 40px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+    @media (max-width:860px){
+      .nav{flex-direction:column;align-items:flex-start;gap:12px}
+      .links{flex-wrap:wrap;gap:14px}
+      .card{padding:22px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">Aryan Sharma</a>
+      <nav class="links">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="research.html">Research</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="eyebrow">Resume</div>
+    <h1>Education, experience, and skills.</h1>
+    <p class="lead">
+      This page gives you a clean resume-style presentation on the website itself. You can also add a direct PDF resume link here once your final resume file is ready.
+    </p>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Education</h2>
+        <div class="item">
+          <strong>University of Colorado Boulder</strong>
+          <div class="meta">B.S. in Aerospace Engineering Sciences · Undergraduate</div>
+          <div class="text">
+            Aerospace engineering student with interests in astrodynamics, GNC, spacecraft autonomy, and control-focused technical development.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Experience</h2>
+        <div class="item">
+          <strong>Rocket Payload Engineering Experience</strong>
+          <div class="meta">Student space program lab</div>
+          <div class="text">
+            Worked in a student aerospace project environment involving payload-related technical work, subsystem coordination, and practical engineering execution.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Technical Interests</h2>
+        <div class="item">
+          <strong>Primary Focus Areas</strong>
+          <div class="meta">Guidance, Navigation and Control · Autonomy · Astrodynamics</div>
+          <div class="text">
+            Interested in mathematically grounded space systems work, especially trajectory analysis, orbital mechanics, spacecraft control, and future research-centered aerospace development.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Skills</h2>
+        <div class="item">
+          <strong>Engineering and Analytical Development</strong>
+          <div class="meta">Replace with your exact software, coding, and laboratory tools</div>
+          <div class="text">
+            Add your exact technical stack here, such as programming languages, simulation tools, CAD platforms, control-related coursework, numerical methods, and lab experience.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Resume File</h2>
+        <div class="item">
+          <strong>PDF Link</strong>
+          <div class="meta">Add your hosted resume PDF here</div>
+          <div class="text">
+            Example: replace this text with a direct link such as “Download Resume PDF.”
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    Add a downloadable PDF resume link once your final file is ready.
+  </footer>
+</body>
+</html>
