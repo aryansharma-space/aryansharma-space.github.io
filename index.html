@@ -3,592 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aryan Sharma | Aerospace Systems Portfolio</title>
-  <meta name="description" content="Aryan Sharma is an aerospace engineering student focused on GNC, astrodynamics, autonomy, and spacecraft systems." />
+  <title>Aryan Sharma | Aerospace Engineering</title>
+  <meta name="description" content="Personal website of Aryan Sharma, aerospace engineering student focused on GNC, autonomy, astrodynamics, and spacecraft control." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #071019;
-      --surface: rgba(14, 22, 33, 0.88);
-      --surface-2: rgba(18, 28, 42, 0.98);
-      --text: #edf4ff;
-      --muted: #94a8bf;
-      --line: rgba(167, 201, 255, 0.14);
-      --accent: #61c4ff;
-      --accent-2: #9d7dff;
-      --accent-soft: rgba(97,196,255,0.12);
-      --max: 1160px;
-      --shadow: 0 24px 80px rgba(0,0,0,0.30);
-      --radius: 24px;
+    :root{
+      --bg:#0b0b0d;
+      --surface:#111216;
+      --surface-2:#17191f;
+      --text:#f3f4f6;
+      --muted:#9aa0aa;
+      --line:rgba(255,255,255,0.10);
+      --accent:#8cb6ff;
+      --max:1080px;
+      --r:24px;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: "General Sans", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% 20%, rgba(97,196,255,0.16), transparent 26%),
-        radial-gradient(circle at 85% 10%, rgba(157,125,255,0.16), transparent 22%),
-        linear-gradient(180deg, #08111b 0%, #050a10 100%);
-      line-height: 1.65;
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Inter",sans-serif;
+      background:radial-gradient(circle at top, #14161c 0%, #0b0b0d 45%);
+      color:var(--text);
+      line-height:1.7;
     }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: 0 auto;
+    a{text-decoration:none;color:inherit}
+    .container{width:min(92%,var(--max));margin:0 auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(16px);
+      background:rgba(11,11,13,.78);
+      border-bottom:1px solid var(--line);
     }
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(18px);
-      background: rgba(5,10,16,0.72);
-      border-bottom: 1px solid var(--line);
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 0;
     }
-
-    .nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+    .brand{
+      font-size:.95rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
     }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+    .links{
+      display:flex;gap:22px;color:var(--muted);font-size:.95rem;
     }
-
-    .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background:
-        linear-gradient(135deg, rgba(97,196,255,0.20), rgba(157,125,255,0.20)),
-        rgba(255,255,255,0.02);
-      display: grid;
-      place-items: center;
-      box-shadow: var(--shadow);
-      font-size: 0.92rem;
+    .links a:hover{color:var(--text)}
+    main{
+      min-height:100vh;
+      display:grid;
+      align-items:center;
+      padding:72px 0;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      color: var(--muted);
-      font-size: 0.95rem;
+    .hero{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:24px;
+      align-items:start;
     }
-
-    .nav-links a:hover { color: var(--text); }
-
-    .hero {
-      padding: 86px 0 54px;
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:34px;
     }
-
-    .hero-wrap {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: stretch;
+    .eyebrow{
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      margin-bottom:18px;
     }
-
-    .hero-main,
-    .hero-side,
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
+    h1{
+      font-family:"Instrument Serif",serif;
+      font-size:clamp(3rem,8vw,6rem);
+      font-weight:400;
+      line-height:.96;
+      letter-spacing:-.04em;
+      max-width:9ch;
     }
-
-    .hero-main {
-      padding: 42px;
-      min-height: 72vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+    .intro{
+      margin-top:24px;
+      max-width:62ch;
+      color:#d7dbe1;
+      font-size:1.04rem;
     }
-
-    .hero-main::after {
-      content: "";
-      position: absolute;
-      inset: auto -10% -30% auto;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(97,196,255,0.14), transparent 65%);
-      pointer-events: none;
+    .about{
+      margin-top:22px;
+      color:#d7dbe1;
     }
-
-    .kicker {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.76rem;
-      margin-bottom: 18px;
+    .menu{
+      display:grid;
+      gap:14px;
     }
-
-    h1 {
-      font-family: "Cabinet Grotesk", sans-serif;
-      font-size: clamp(3rem, 7vw, 5.8rem);
-      line-height: 0.94;
-      letter-spacing: -0.05em;
-      max-width: 10ch;
+    .menu a{
+      display:block;
+      padding:18px 20px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:var(--surface);
+      transition:.2s ease;
     }
-
-    .hero-main p {
-      margin-top: 24px;
-      max-width: 60ch;
-      color: #d9e6f7;
-      font-size: 1.04rem;
+    .menu a:hover{
+      transform:translateY(-2px);
+      border-color:rgba(140,182,255,.35);
     }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 30px;
+    .menu strong{
+      display:block;
+      margin-bottom:4px;
+      color:var(--text);
+      font-size:1rem;
     }
-
-    .btn {
-      min-height: 48px;
-      padding: 0 18px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      transition: 0.24s ease;
+    .menu span{
+      color:var(--muted);
+      font-size:.94rem;
     }
-
-    .btn.primary {
-      background: linear-gradient(135deg, var(--accent), #90d6ff);
-      color: #06111a;
-      border-color: transparent;
+    footer{
+      padding:0 0 40px;
+      color:var(--muted);
+      font-size:.92rem;
     }
-
-    .btn.secondary {
-      background: transparent;
-      color: var(--text);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-side {
-      padding: 24px;
-      display: grid;
-      gap: 18px;
-      align-content: start;
-    }
-
-    .mini-card {
-      padding: 22px;
-      border-radius: 20px;
-      background: var(--surface-2);
-      border: 1px solid var(--line);
-    }
-
-    .mini-label {
-      color: var(--muted);
-      font-size: 0.76rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .mini-card h3 {
-      font-size: 1.08rem;
-      margin-bottom: 10px;
-    }
-
-    .mini-card p {
-      color: #c9d8eb;
-      font-size: 0.96rem;
-    }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .focus-pill {
-      padding: 14px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      font-size: 0.92rem;
-      color: #dbe7f4;
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    .section-top {
-      display: grid;
-      grid-template-columns: 0.5fr 1.5fr;
-      gap: 24px;
-      margin-bottom: 28px;
-      align-items: start;
-    }
-
-    .section-tag {
-      color: var(--accent);
-      text-transform: uppercase;
-      font-size: 0.76rem;
-      letter-spacing: 0.15em;
-      padding-top: 10px;
-    }
-
-    h2 {
-      font-family: "Cabinet Grotesk", sans-serif;
-      font-size: clamp(2rem, 4vw, 3.25rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
-      margin-bottom: 12px;
-    }
-
-    .section-text {
-      color: #d3def0;
-      max-width: 72ch;
-    }
-
-    .about-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 22px;
-    }
-
-    .card {
-      padding: 30px;
-    }
-
-    .detail-list {
-      list-style: none;
-      display: grid;
-      gap: 14px;
-      color: var(--muted);
-    }
-
-    .detail-list strong {
-      color: var(--text);
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.96rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 22px;
-    }
-
-    .project {
-      padding: 28px;
-      border-radius: 24px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .project.large { grid-column: span 7; }
-    .project.small { grid-column: span 5; }
-    .project.full { grid-column: 1 / -1; }
-
-    .project-type {
-      display: inline-flex;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: #b9e7ff;
-      border: 1px solid rgba(97,196,255,0.16);
-      font-size: 0.82rem;
-      margin-bottom: 16px;
-    }
-
-    .project h3 {
-      font-size: 1.28rem;
-      margin-bottom: 10px;
-    }
-
-    .project .meta {
-      color: var(--muted);
-      font-size: 0.94rem;
-      margin-bottom: 14px;
-    }
-
-    .project p {
-      color: #d6e0ee;
-      margin-bottom: 16px;
-    }
-
-    .project ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      color: var(--muted);
-    }
-
-    .project li::before {
-      content: "▹ ";
-      color: var(--accent);
-    }
-
-    footer {
-      padding: 24px 0 54px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 980px) {
-      .hero-wrap,
-      .section-top,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
-      .project.large,
-      .project.small,
-      .project.full {
-        grid-column: auto;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 16px 0;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      .hero-main,
-      .hero-side,
-      .card,
-      .project {
-        padding: 22px;
-      }
-
-      .focus-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+      .nav{flex-direction:column;align-items:flex-start;gap:12px}
+      .links{flex-wrap:wrap;gap:14px}
+      .panel{padding:24px}
     }
   </style>
 </head>
 <body>
-  <header class="header">
+  <header>
     <div class="container nav">
-      <a href="#" class="logo">
-        <span class="logo-mark">A</span>
-        <span>Aryan Sharma</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <a href="index.html" class="brand">Aryan Sharma</a>
+      <nav class="links">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="research.html">Research</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <div class="hero-wrap">
-        <div class="hero-main">
-          <div class="kicker">Aerospace Systems · Portfolio</div>
-          <h1>Designing toward control, autonomy, and orbital analysis.</h1>
-          <p>
-            I am an aerospace engineering student building toward technically demanding work in guidance, navigation and control, astrodynamics, autonomy, and spacecraft systems. My portfolio is meant to show a serious trajectory: stronger analysis, better engineering judgment, and projects aligned with long-term depth.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn primary">Explore Projects</a>
-            <a href="#contact" class="btn secondary">Get in Touch</a>
-          </div>
+      <div class="panel">
+        <div class="eyebrow">About Me</div>
+        <h1>Aerospace engineering with a long-range technical direction.</h1>
+        <p class="intro">
+          I am Aryan Sharma, an aerospace engineering student at the University of Colorado Boulder with a growing focus on guidance, navigation and control, spacecraft autonomy, astrodynamics, and spacecraft control. My goal is to build a technically serious body of work centered on rigorous analysis, strong engineering judgment, and deeper engagement with orbital and control-focused problems.
+        </p>
+        <p class="about">
+          This website is intended to remain simple and focused. The homepage serves as a short introduction, while the rest of the site separates projects, resume material, and research writing into their own dedicated pages.
+        </p>
+      </div>
+
+      <aside class="panel">
+        <div class="eyebrow">Navigation</div>
+        <div class="menu">
+          <a href="projects.html">
+            <strong>Projects</strong>
+            <span>Selected technical work and project summaries.</span>
+          </a>
+          <a href="resume.html">
+            <strong>Resume</strong>
+            <span>Experience, education, skills, and professional profile.</span>
+          </a>
+          <a href="research.html">
+            <strong>Research</strong>
+            <span>Research interests, paper summaries, and academic direction.</span>
+          </a>
         </div>
-
-        <aside class="hero-side">
-          <div class="mini-card">
-            <div class="mini-label">Mission profile</div>
-            <h3>Research-oriented aerospace growth</h3>
-            <p>
-              My work is increasingly centered on mathematically grounded space systems problems, especially where orbital mechanics and control logic begin to overlap.
-            </p>
-          </div>
-
-          <div class="mini-card">
-            <div class="mini-label">Focus stack</div>
-            <div class="focus-grid">
-              <div class="focus-pill">GNC</div>
-              <div class="focus-pill">Astrodynamics</div>
-              <div class="focus-pill">Autonomy</div>
-              <div class="focus-pill">Trajectory Design</div>
-            </div>
-          </div>
-
-          <div class="mini-card">
-            <div class="mini-label">Portfolio intent</div>
-            <p>
-              Not a generic personal site, but a clear technical record of aerospace work, engineering direction, and selected project depth.
-            </p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="section-top">
-        <div class="section-tag">About</div>
-        <div>
-          <h2>Building a disciplined path into advanced aerospace work.</h2>
-          <p class="section-text">
-            I am an undergraduate aerospace engineering student at CU Boulder with a growing technical focus on guidance, navigation and control, spacecraft autonomy, trajectory optimization, and orbital mechanics. I am especially drawn to engineering problems that require analytical clarity, strong physical intuition, and careful systems thinking.
-          </p>
-        </div>
-      </div>
-
-      <div class="about-grid">
-        <div class="card">
-          <p>
-            My long-term direction is toward spacecraft control and research-intensive technical work, with astrodynamics as a durable intellectual base. I want the projects on this site to show increasing rigor over time: not just what I built, but how I think, how I analyze, and how I approach technically meaningful aerospace problems.
-          </p>
-        </div>
-
-        <aside class="card">
-          <ul class="detail-list">
-            <li>
-              <strong>Education</strong>
-              Aerospace engineering undergraduate, CU Boulder
-            </li>
-            <li>
-              <strong>Interests</strong>
-              GNC, autonomy, orbital mechanics, trajectory optimization
-            </li>
-            <li>
-              <strong>Portfolio theme</strong>
-              Technical maturity, focus, and coherent engineering direction
-            </li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="section-top">
-        <div class="section-tag">Projects</div>
-        <div>
-          <h2>Selected work and emerging direction.</h2>
-          <p class="section-text">
-            Good engineering portfolios are focused: a few relevant projects, clear role definition, and concise explanation of methods and results. These sections give you a ready structure that you can directly replace with fuller project specifics later.
-          </p>
-        </div>
-      </div>
-
-      <div class="projects">
-        <article class="project large">
-          <div class="project-type">Payload Systems</div>
-          <h3>Rocket Payload Engineering</h3>
-          <div class="meta">Student space program lab · Integration, testing, subsystem coordination</div>
-          <p>
-            Worked in a student aerospace build environment on payload-related engineering tasks, where hardware realities, subsystem interfaces, and execution discipline mattered as much as conceptual design.
-          </p>
-          <ul>
-            <li>Contributed within a team-driven technical environment.</li>
-            <li>Gained hands-on exposure to payload implementation constraints.</li>
-            <li>Strengthened the connection between engineering planning and physical realization.</li>
-          </ul>
-        </article>
-
-        <article class="project small">
-          <div class="project-type">Astrodynamics</div>
-          <h3>Three-Body Simulation</h3>
-          <div class="meta">Numerical modeling · Orbital dynamics · Analytical interpretation</div>
-          <p>
-            Used simulation work to deepen intuition for nonlinear orbital behavior and to build a stronger analytical base for future trajectory and control applications.
-          </p>
-          <ul>
-            <li>Explored dynamics beyond simple two-body assumptions.</li>
-            <li>Built stronger comfort with complex orbital motion.</li>
-            <li>Used the project as technical preparation, not just presentation.</li>
-          </ul>
-        </article>
-
-        <article class="project full">
-          <div class="project-type">Future Direction</div>
-          <h3>GNC, Autonomy, and Spacecraft Control Track</h3>
-          <div class="meta">Portfolio direction · Navigation logic · Control systems · Space systems depth</div>
-          <p>
-            This portfolio is being shaped around a clear technical direction: guidance and control, autonomy, orbital design, and high-rigor spacecraft systems work. Rather than collecting unrelated projects, the goal is to build a connected body of work that reflects research seriousness and long-term depth.
-          </p>
-          <ul>
-            <li>Frames the portfolio around one coherent aerospace identity.</li>
-            <li>Links current student work to future advanced control and mission design goals.</li>
-            <li>Creates room for future case studies with stronger numerical and systems depth.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-top">
-        <div class="section-tag">Contact</div>
-        <div>
-          <h2>Make the next version useful.</h2>
-          <p class="section-text">
-            Replace the placeholders below with your actual contact details, resume, and links. Once those are added, this page becomes a real professional landing point for labs, recruiters, and technical collaborators.
-          </p>
-        </div>
-      </div>
-
-      <div class="contact-grid">
-        <div class="card">
-          <p>
-            This version is designed to feel sharper, more contemporary, and more systems-oriented than a standard student portfolio while still staying readable and direct. It works well if you want the site to feel closer to “technical portfolio” than “personal bio page.”
-          </p>
-        </div>
-
-        <aside class="card">
-          <ul class="detail-list">
-            <li><strong>Email</strong> your.email@example.com</li>
-            <li><strong>GitHub</strong> github.com/aryansharma-space</li>
-            <li><strong>LinkedIn</strong> Add your LinkedIn profile</li>
-            <li><strong>Resume</strong> Add your PDF resume link</li>
-          </ul>
-        </aside>
-      </div>
+      </aside>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      Built as a static single-page portfolio for GitHub Pages.
-    </div>
+  <footer class="container">
+    Minimal portfolio site built for GitHub Pages.
   </footer>
 </body>
 </html>
