@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Aryan Sharma</title>
+  <meta name="description" content="Projects by Aryan Sharma in aerospace engineering, astrodynamics, and control-focused work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --surface:#111216;
+      --text:#f3f4f6;
+      --muted:#9aa0aa;
+      --line:rgba(255,255,255,0.10);
+      --accent:#8cb6ff;
+      --max:1080px;
+      --r:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Inter",sans-serif;
+      background:radial-gradient(circle at top, #14161c 0%, #0b0b0d 45%);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(92%,var(--max));margin:0 auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(16px);
+      background:rgba(11,11,13,.78);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 0;
+    }
+    .brand{
+      font-size:.95rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    }
+    .links{
+      display:flex;gap:22px;color:var(--muted);font-size:.95rem;
+    }
+    .links a:hover{color:var(--text)}
+    main{padding:72px 0}
+    .eyebrow{
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      margin-bottom:18px;
+    }
+    h1{
+      font-family:"Instrument Serif",serif;
+      font-size:clamp(2.8rem,6vw,4.8rem);
+      font-weight:400;
+      line-height:.98;
+      letter-spacing:-.04em;
+      margin-bottom:18px;
+    }
+    .lead{
+      color:#d7dbe1;
+      max-width:68ch;
+      margin-bottom:34px;
+    }
+    .grid{
+      display:grid;
+      gap:22px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:28px;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:.93rem;
+      margin:8px 0 14px;
+    }
+    h2{
+      font-size:1.22rem;
+      margin-bottom:6px;
+    }
+    .card p{
+      color:#d8dce2;
+      margin-bottom:16px;
+    }
+    ul{
+      list-style:none;
+      display:grid;
+      gap:10px;
+      color:var(--muted);
+    }
+    li::before{
+      content:"— ";
+      color:var(--accent);
+    }
+    footer{
+      padding:0 0 40px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+    @media (max-width:860px){
+      .nav{flex-direction:column;align-items:flex-start;gap:12px}
+      .links{flex-wrap:wrap;gap:14px}
+      .card{padding:22px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">Aryan Sharma</a>
+      <nav class="links">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="research.html">Research</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="eyebrow">Projects</div>
+    <h1>Selected technical work.</h1>
+    <p class="lead">
+      This page is designed to keep each project clearly separated. As you improve the site, expand each entry with dates, tools, images, results, and a more exact description of your role.
+    </p>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Rocket Payload Engineering</h2>
+        <div class="meta">Student space program lab · Payload integration · Testing · Coordination</div>
+        <p>
+          Worked on payload-related engineering tasks in a student aerospace build environment, where subsystem integration, implementation constraints, and practical execution all mattered.
+        </p>
+        <ul>
+          <li>Contributed within a team-based aerospace engineering setting.</li>
+          <li>Built experience with payload implementation and coordination.</li>
+          <li>Strengthened understanding of the link between technical plans and physical hardware work.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Three-Body Simulation Study</h2>
+        <div class="meta">Astrodynamics · Numerical modeling · Orbital behavior</div>
+        <p>
+          Used simulation-based work to deepen intuition for nonlinear orbital motion and to develop a stronger analytical foundation for future control and trajectory problems.
+        </p>
+        <ul>
+          <li>Explored complex gravitational behavior beyond simplified orbital assumptions.</li>
+          <li>Focused on understanding physical and mathematical structure, not just visual output.</li>
+          <li>Built a stronger basis for future astrodynamics and control-oriented work.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Future GNC and Autonomy Work</h2>
+        <div class="meta">Portfolio direction · Control systems · Navigation · Autonomy</div>
+        <p>
+          This section represents the technical direction of the portfolio itself: guidance, navigation and control, autonomy, orbital mechanics, and spacecraft control as a coherent long-term path.
+        </p>
+        <ul>
+          <li>Frames the site around one serious aerospace identity.</li>
+          <li>Connects present student work to future advanced technical depth.</li>
+          <li>Leaves room for future project pages with stronger numerical and systems detail.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="container">
+    Add project images, dates, and links as your portfolio develops.
+  </footer>
+</body>
+</html>
